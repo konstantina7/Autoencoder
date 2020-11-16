@@ -28,7 +28,7 @@ def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1, 2, 2, 1],
                         strides=[1, 2, 2, 1], padding='SAME')
 def conv2dtransp(x, W, o1, o2):
-     # conv2dtransp returns a 2d transposed convolution layer with stride of 2 and padding.
+     # conv2dtransp returns a 2d transposed convolution layer with stride of 2 and padding
      temp_batch_size = tf.shape(x)[0]
      output_shape = [temp_batch_size, o1, o1, o2]
      return tf.nn.conv2d_transpose(x, W, output_shape, strides=[1, 2, 2, 1], padding='SAME')
